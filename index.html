@@ -189,7 +189,9 @@ a:hover{
 .text_container{
 
 }
+.nav-click{
 
+}
 	</style>
 
 </head>
@@ -217,10 +219,11 @@ a:hover{
   <h1 style="padding-top:6%; padding-bottom:2%; color: #ffffff; font-size: 36pt;!important">Getting Started With Rise Vision</h1>
   <center>
       <ul style="margin:0 auto; list-style-type: none; display:inline; color:#FFFFFF; !important">
-        <li class="text_container"><a href="#step1">Create An Account</a></li>
-        <li>Create A Presentation</li>
-        <li>Create A Schedule</li>
-        <li>Create A Display</li>
+        <li class="nav-click"><a href="#step1">Create An Account</a></li>
+        <li class="nav-click2">Create A Presentation</li>
+        <li class="nav-click3">Create A Schedule</li>
+        <li class="nav-click4">Create A Display</li>
+        <li class="nav-click5">Content Examples</li>
       </ul>
   </center>
 </div>
@@ -241,9 +244,9 @@ a:hover{
 
 
 
-<div class="text_container">
+<div class="nav-click">
   <h1 style="  border: 2px solid #2e62ab;">Step 1. Creating An Account</h1>
-    <div ><!--div that we want to hide-->     
+    <div class="text_container2" ><!--div that we want to hide-->     
     <a name="step1"></a>  
       <p>First step is creating an account. You can login with an existing Google Account or create a new Google Account.
       <br>
@@ -260,10 +263,9 @@ a:hover{
 
 
 
-
-<div class="text_container">
+<div class="nav-click2">
   <h1 style="  border: 2px solid #2e62ab;">Step 2. Create A Presentation</h1>
-    <div>
+    <div class="text_container3">
       <p>To create your first presentation, use one of the pre-built presentation templates available in the Rise Vision platform. 
       <ul style="padding-left: 25px;">
         <li>Click on the Presentation link at the top of the Rise Vision page, and then click the "Add from Template" button in the top right corner of the page. This reveals a list of pre-configured presentation templates.</li> 
@@ -281,9 +283,9 @@ a:hover{
 
 
 
-<div class="text_container">
+<div class="nav-click3">
   <h1 style="  border: 2px solid #2e62ab;">Step 3. Create A Schedule</h1>
-    <div>
+    <div class="text_container4">
       <p>Schedules allow you to show more than one presentation or web page on your displays. 
         <ul style="padding-left: 25px;">
           <li>To create a schedule Within Rise Vision, click the "Schedules" link at the top of any page.</li> 
@@ -308,9 +310,9 @@ a:hover{
 
 
 
-<div class="text_container">
+<div class="nav-click4">
   <h1 style="  border: 2px solid #2e62ab;">Step 4. Creating A Display</h1>
-    <div>
+    <div class="text_container5">
       <p>To create a display in the Rise Vision platform; click the "Displays" link at the top of any page 
         <ul style="padding-left: 25px;">
           <li>Then click the "Add Display" button in the top right corner of the page. Give your display a name and click the Save button.</li>
@@ -337,9 +339,9 @@ a:hover{
 
 
 
-<div class="text_container">
+<div class="nav-click5">
   <h1 style="  border: 2px solid #2e62ab;">Content Examples</h1>
-    <div>
+    <div class="text_container6">
       <img width="718" style="padding-top:25px;" src="http://www.risevision.com/wp-content/themes/hsrisevision/assets/img/landing-menuboards-menus.png">
       <p>Not really sure what you want? Tried creating something on your own but just can't get it to look professional? You are not alone and we can help in whatever way you want, we have an experienced team that can take an idea from paper to the display or just tweak something you already have to get the look you want. </p>
       <p style="margin: 0 auto; text-align:center; width:230px; border:10px solid  #47b767;  color:#FFFFFF; background: #47b767;!important">Rise Vision Content Design</p>
@@ -407,6 +409,29 @@ a:hover{
             }
         });
     });
+</script>
+
+<script type="text/javascript">
+ jQuery(".text_container2").hide();
+    jQuery(".nav-click").click(function(){
+          jQuery(".text_container2").slideToggle(100);
+       });
+ jQuery(".text_container3").hide();
+    jQuery(".nav-click2").click(function(){
+          jQuery(".text_container3").slideToggle(100);
+       });
+    jQuery(".text_container4").hide();
+    jQuery(".nav-click3").click(function(){
+          jQuery(".text_container4").slideToggle(100);
+       });
+    jQuery(".text_container5").hide();
+    jQuery(".nav-click4").click(function(){
+          jQuery(".text_container5").slideToggle(100);
+       });
+    jQuery(".text_container6").hide();
+    jQuery(".nav-click5").click(function(){
+          jQuery(".text_container6").slideToggle(100);
+       });
 </script>
 
 </body>

@@ -1,0 +1,555 @@
+
+<!DOCTYPE HTML>
+
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+	
+<title>Getting Started</title>
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<link rel="icon" type="image/png" href="s.png">
+
+  <style type="text/css">
+  
+  h1 {
+    font-size: 18pt;
+    font-family: helvetica neue ;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    margin: 2px;
+    color: #FFFFFF;
+    background-color: #2e62ab;
+  }
+
+  p {
+    font-size: 14pt;
+    font-family: avenir;
+ 
+  }
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+
+  }
+  a:hover{
+    color:#2e62ab;
+  }
+
+  ul {
+     
+    margin: 0;
+    padding: 0;
+}
+
+li {
+   
+    font-size: 14pt;
+    padding-top: 8px;
+    font-family: avenir;
+
+
+}
+.nav {
+   padding-top: 10px;
+   position: fixed;
+   width: 100%;
+   height: 40px;
+   /* background-color: rgba(43, 46, 52, 0.5);  */
+   margin: 0 auto;
+  }
+
+a:hover{
+  zoom:101%;
+}
+
+.top {
+  background-color: #2e62ab;
+  height: 400px;
+  text-align: center;
+
+}
+.top li{
+  display:inline;
+  padding: 8px;
+  border: 2px solid #ffffff;"
+  margin-top: 18%;
+  margin: 5px;
+
+}
+.top ul{
+  padding-top: 8%;
+}
+
+.top li:hover{
+  background-color: #ffffff;
+  color:#2e62ab;
+}
+
+
+
+.risevision {
+  background-color: #ffffff;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.risevision-text {
+  max-width: 718px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.community {
+   background-color: #55B0EF;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.community-text {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.wilder {
+   background-color: #15BCD9;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.wilder-text {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.cbs {
+   background-color: #2DA5B3;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cbs-text {
+   max-width: 640px;
+  margin: 0 auto;
+ 
+}
+
+.craigleith {
+ background-color: #55B0EF;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.craigleith-text {
+   max-width: 640px;
+  margin: 0 auto;
+
+}
+
+.dal {
+ background-color: #15BCD9;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dal-text{
+   max-width: 640px;
+  margin: 0 auto;
+}
+
+.contact {
+ background-color: #5C78B4;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-text{
+   max-width: 640px;
+  margin: 0 auto;
+}
+
+.hidden>div {
+    display:none;
+}
+
+.visible>div {
+    display:block;
+}
+
+.text_container{
+
+}
+.nav-click{
+
+}
+/*
+  Docs at http://http://simpleweatherjs.com
+
+  Look inspired by http://www.degreees.com/
+  Used for demo purposes.
+
+  Weather icon font from http://fonts.artill.de/collection/artill-weather-icons
+
+  DO NOT hotlink the assets/font included in this demo. If you wish to use the same font icon then download it to your local assets at the link above. If you use the links below odds are at some point they will be removed and your version will break.
+*/
+
+@font-face {
+    font-family: 'weather';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot');
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff') format('woff'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf') format('truetype'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#weather {
+  width: 500px;
+  margin: 0px auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+i {
+  color: #fff;
+  font-family: weather;
+  font-size: 150px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.0;
+}
+
+.icon-0:before { content: ":"; }
+.icon-1:before { content: "p"; }
+.icon-2:before { content: "S"; }
+.icon-3:before { content: "Q"; }
+.icon-4:before { content: "S"; }
+.icon-5:before { content: "W"; }
+.icon-6:before { content: "W"; }
+.icon-7:before { content: "W"; }
+.icon-8:before { content: "W"; }
+.icon-9:before { content: "I"; }
+.icon-10:before { content: "W"; }
+.icon-11:before { content: "I"; }
+.icon-12:before { content: "I"; }
+.icon-13:before { content: "I"; }
+.icon-14:before { content: "I"; }
+.icon-15:before { content: "W"; }
+.icon-16:before { content: "I"; }
+.icon-17:before { content: "W"; }
+.icon-18:before { content: "U"; }
+.icon-19:before { content: "Z"; }
+.icon-20:before { content: "Z"; }
+.icon-21:before { content: "Z"; }
+.icon-22:before { content: "Z"; }
+.icon-23:before { content: "Z"; }
+.icon-24:before { content: "E"; }
+.icon-25:before { content: "E"; }
+.icon-26:before { content: "3"; }
+.icon-27:before { content: "a"; }
+.icon-28:before { content: "A"; }
+.icon-29:before { content: "a"; }
+.icon-30:before { content: "A"; }
+.icon-31:before { content: "6"; }
+.icon-32:before { content: "1"; }
+.icon-33:before { content: "6"; }
+.icon-34:before { content: "1"; }
+.icon-35:before { content: "W"; }
+.icon-36:before { content: "1"; }
+.icon-37:before { content: "S"; }
+.icon-38:before { content: "S"; }
+.icon-39:before { content: "S"; }
+.icon-40:before { content: "M"; }
+.icon-41:before { content: "W"; }
+.icon-42:before { content: "I"; }
+.icon-43:before { content: "W"; }
+.icon-44:before { content: "a"; }
+.icon-45:before { content: "S"; }
+.icon-46:before { content: "U"; }
+.icon-47:before { content: "S"; }
+
+#weather h2 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 100px;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+#weather ul {
+  margin: 0;
+  padding: 0;
+}
+
+#weather li {
+  background: #fff;
+  background: rgba(255,255,255,0.90);
+  padding: 20px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+#weather .currently {
+  margin: 0 20px;
+}
+	</style>
+
+</head>
+
+
+
+<body style="margin:0px;">
+<div class="wrapper">
+  <!---
+<div class="nav">
+<center>
+      <ul style="margin:0 auto; list-style-type: none; color:#FFFFFF; !important">
+        <li>Create An Account</li>
+        <li>Create A Presentation</li>
+        <li>Create A Schedule</li>
+        <li>Create A Display</li>
+      </ul>
+  </center>
+</div>
+  ------>
+
+
+
+<div class="top">
+  <h1 style="padding-top:8%; padding-bottom:2%; color: #ffffff; font-size: 36pt;!important">Getting Started With Rise Vision</h1>
+ <!---- <center>
+      <ul style="margin:0 auto; list-style-type: none; display:inline; color:#FFFFFF; !important">
+        <li class="nav-click"><a href="#step1">Create An Account</a></li>
+        <li class="nav-click2">Create A Presentation</li>
+        <li class="nav-click3">Create A Schedule</li>
+        <li class="nav-click4">Create A Display</li>
+        <li class="nav-click5">Content Examples</li>
+      </ul>
+  </center>------>
+</div>
+
+
+<div id="weather">hi</div>
+
+<div class="risevision">
+  <div class="risevision-text">
+    
+   <!---- <a name="rise"></a>
+      <p>Below is a start-up guide for our platform. It covers everything from creating an account, to connecting your displays.</p>
+      <center><h1>What You Need To Get Started</h1></center>
+      <ul style="padding-left: 25px; padding-bottom:25px;">
+        <li>A Media Player: If you do not have a media player check out this page to figure out which one is best for your needs.</li>
+        <li>A Display: We reccommend using a 4K display for digital signage.</li>
+        <li>A Rise Vision Account</li>
+      </ul>-------->
+
+
+<div class="nav-click">
+  <h1 style="  border: 2px solid #2e62ab;">Step 1. Sign Up</h1>
+    <div class="text_container2" ><!--div that we want to hide-->     
+    <a name="step1"></a>  
+      <p>First step is creating an account. You can login with an existing Google Account or create a new Google Account.
+      <br>
+      <p style="margin: 0 auto; text-align:center; width:170px; border:10px solid  #47b767;  color:#FFFFFF; background: #47b767;!important">Login With Google</p>
+      <br>
+      <p style="margin: 0 auto; text-align:center; width:170px;font-size:10pt; text-decoration:underline;">Create A Google Account</p>
+      <br>
+      <p>If you would like an in-depth walk through of the platform check out a training hangout or purchase one-on-one training.</p>
+      <p style="margin: 0 auto; text-align:center; width:180px; border:10px solid  #47b767;  color:#FFFFFF; background: #47b767;!important margin:0px;">Training Hangouts</p>
+      <br><br>
+      <p style="margin: 0 auto; text-align:center; width:180px; border:10px solid  #47b767;  color:#FFFFFF; margin-bottom:25px;background: #47b767;!important">One-on-One Training</p>
+    </div>
+</div><!--end div_text_container-->
+
+
+
+<div class="nav-click2">
+  <h1 style="  border: 2px solid #2e62ab;">Step 2. Add a Presentation</h1>
+    <div class="text_container3">
+      <p>To create your first presentation, use one of the pre-built presentation templates available in the Rise Vision platform. 
+      <ul style="padding-left: 25px;">
+        <li>Click on the Presentation link at the top of the Rise Vision page, and then click the "Add from Template" button in the top right corner of the page. This reveals a list of pre-configured presentation templates.</li> 
+        <li>To select that template, click the "Select" link to the left of its name. This opens a copy of the template in your Presentations window, with the header "Copy of [name of template]".</li>
+        <li>To save this presentation, click the Copy icon in the top right corner (the floppy disk image). This places your new copy of the template into your accoun's list of presentations, making it available for you to customize for your own displays.</li>
+      </ul>
+      </p>
+      <iframe class="imgur-embed" width="718" height="404" style="border:1px solid #021a40;"frameborder="0" src="http://i.imgur.com/9JV0cZ3.gifv#embed"></iframe>
+      <p>Not really sure what you want? Tried creating something on your own but just can't get it to look professional? You are not alone and we can help in whatever way you want, we have an experienced team that can take an idea from paper to the display or just tweak something you already have to get the look you want. </p> 
+      <p style="margin: 0 auto; text-align:center; width:230px; border:10px solid  #47b767;  color:#FFFFFF; background: #47b767; margin-bottom:25px; !important">Rise Vision Content Design</p>
+      <img width="718" style="padding-top:25px;" src="http://www.risevision.com/wp-content/themes/hsrisevision/assets/img/landing-menuboards-menus.png">
+</div>
+</div>
+
+
+
+<div class="nav-click4">
+  <h1 style="  border: 2px solid #2e62ab;">Step 3. Setup a Display</h1>
+    <div class="text_container5">
+      <p>To create a display in the Rise Vision platform; click the "Displays" link at the top of any page 
+        <ul style="padding-left: 25px;">
+          <li>Then click the "Add Display" button in the top right corner of the page. Give your display a name and click the Save button.</li>
+          <li> Once saved, a Display ID is generated and will be shown on the dipslay settings page. This ID used to uniquly identify a Display.</li>
+        </ul>
+      </p>
+      <a href="http://imgur.com/zIA8XEX"><img  style="border:1px solid #021a40;" src="http://i.imgur.com/zIA8XEX.gif" title="source: imgur.com" /></a>
+      <center><strong><p>Install Player</p></strong></center>
+      <p>Player is the application that you install on your computer or media player in order to play presentations on your displays.
+      <br><br>
+      To install Player, navigate to http://www.risevision.com/player and select the Rise Vision Player application download link appropriate for your media player.
+      <br><br>
+      To assign a Display ID to a display:
+      <ul style="padding-left: 25px; ">
+        <li>Start the Rise Vision Player application</li>
+        <li>Click the "Enter Display ID" button and enter the 
+        Display ID for the display created on the Displays page in the Rise Vision Platform</lI>
+        <li>Click on the "Apply" button. The Player application will restart and begin to Play the presentation that has been defined according its Schedule.</li>
+      </ul>
+      <p style="  margin: 0 auto; text-align:center; width:230px; border:10px solid  #47b767;  color:#FFFFFF; background: #47b767; margin-bottom:25px; margin-top:25px;!important">Check out media players</p>
+</div>
+</div>
+
+
+
+
+<div class="nav-click3">
+  <h1 style="  border: 2px solid #2e62ab;">Step 4. Schedule your Presentation</h1>
+    <div class="text_container4">
+      <p>Schedules allow you to show more than one presentation or web page on your displays. 
+        <ul style="padding-left: 25px;">
+          <li>To create a schedule Within Rise Vision, click the "Schedules" link at the top of any page.</li> 
+          <li>On the Schedules page, click the Add button. For now, leave the Timeline and Distribution at their default settings.</li>
+        </ul>
+      </p>
+        <a href="http://imgur.com/zJQ4agf"><img style="border:1px solid #021a40;" height="404"width="718"src="http://i.imgur.com/zJQ4agf.gif" title="source: imgur.com" /></a>
+
+      <center><strong><p>Add A Presentation</p></strong></center>
+      <ul style="padding-left: 25px; padding-bottom:25px;">
+        <li>To add a presentation to your schedule click either on "List is empty, Click here to add items", or on the Add link. 
+        <li>In the Content pop-up window that appears, click the Select link next to the presentation that you want to add. </li>
+        <li>Specify the name, duration and timeline settings, and then click the Okay button. Your newly added item will now be listed in the table under the heading "Presentation/URL".</li> 
+        <li>Once you've finished adding all of your presentations and URL's, click the Save button.</li>
+      </ul>
+      <iframe class="imgur-embed" width="718" height="404" style="border:1px solid #021a40;" frameborder="0" src="http://i.imgur.com/Rt6mrwQ.gifv#embed"></iframe>
+</div>
+</div>
+
+</div>
+</div>
+
+ <!----- <div class="community">
+    <div class="community-text">
+      <a name="community"></a>
+      
+    </div>
+  </div>
+
+  <div class="wilder">
+    <div class="wilder-text">
+      <a name="wilder"></a>
+      
+    </div>
+  </div>
+
+  <div class="cbs">
+    <div class="cbs-text">
+      <a name="cbs"></a>
+     
+  </div>
+</div>
+
+<div class="craigleith">
+  <div class="craigleith-text">
+    <a name="craigleith"></a>
+    
+  </div>
+</div>
+
+<div class="dal">
+  <div class="dal-text">
+    <a name="dal"></a>
+ 
+</div>
+</div>
+
+<div class="contact">
+  <div class="contact-text">
+    <a name="contact"></a>
+   
+</div>
+</div> ---->
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.text_container').addClass("hidden");
+
+        $('.text_container').click(function() {
+            var $this = $(this);
+
+            if ($this.hasClass("hidden")) {
+                $(this).removeClass("hidden").addClass("visible");
+
+            } else {
+                $(this).removeClass("visible").addClass("hidden");
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+  // Docs at http://simpleweatherjs.com
+$(document).ready(function() {
+  $.simpleWeather({
+    location: 'Austin, TX',
+    woeid: '',
+    unit: 'f',
+    success: function(weather) {
+      html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+      html += '<li class="currently">'+weather.currently+'</li>';
+      html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
+  
+      $("#weather").html(html);
+    },
+    error: function(error) {
+      $("#weather").html('<p>'+error+'</p>');
+    }
+  });
+});
+
+</script>
+<script type="text/javascript">
+ jQuery(".text_container2").hide();
+    jQuery(".nav-click").click(function(){
+          jQuery(".text_container2").slideToggle(100);
+       });
+ jQuery(".text_container3").hide();
+    jQuery(".nav-click2").click(function(){
+          jQuery(".text_container3").slideToggle(100);
+       });
+    jQuery(".text_container4").hide();
+    jQuery(".nav-click3").click(function(){
+          jQuery(".text_container4").slideToggle(100);
+       });
+    jQuery(".text_container5").hide();
+    jQuery(".nav-click4").click(function(){
+          jQuery(".text_container5").slideToggle(100);
+       });
+    jQuery(".text_container6").hide();
+    jQuery(".nav-click5").click(function(){
+          jQuery(".text_container6").slideToggle(100);
+       });
+</script>
+
+</body>
+</html>
